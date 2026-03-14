@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Добавлено для правильного масштаба на телефонах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Work App</title>
+
+    <!-- Основной скрипт Telegram SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Инициализация WebApp
+        const tg = window.Telegram.WebApp;
+
+        // Сообщаем Telegram, что приложение готово
+        tg.ready();
+
+        // РАЗВОРАЧИВАЕМ ОКНО НА ВЕСЬ ЭКРАН (как в Hamster)
+        tg.expand();
+
+        // Можно также задать цвет темы (опционально)
+        tg.setHeaderColor('secondary_bg_color');
+    </script>
+</head>
+
+<body>
+    <h1>Подработка в Грузии</h1>
+
+    <div class="buttons-container">
+        <button onclick="createOrder()">Создать заказ</button>
+        <button onclick="findJob()">Найти работу</button>
+    </div>
+
+    <!-- Твой основной JS файл -->
+    <script src="app.js"></script>
+</body>
+</html>
